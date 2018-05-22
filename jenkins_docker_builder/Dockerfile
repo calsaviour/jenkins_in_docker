@@ -4,4 +4,3 @@ MAINTAINER Calvin Low <calsaviour@gmail.com>
 ADD . /code
 WORKDIR /code
 RUN ["./script.sh"]
-EXPOSE 8081
