@@ -17,3 +17,10 @@ yum install jenkins -y
 echo "Complete installation of Jenkins"
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 
+
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo "Starting copy config of Jenkins"
+cp /code/jenkins /etc/sysconfig/jenkins
+systemcl enable jenkins
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo "Complete copy config of Jenkins"
