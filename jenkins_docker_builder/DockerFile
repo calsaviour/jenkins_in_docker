@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER Calvin Low <calsaviour@gmail.com>
 
-ADD script.sh /code
+ADD . /code
 WORKDIR /code
 CMD [./script]
 
