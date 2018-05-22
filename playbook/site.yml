@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: Prepare hosts machine with docker , docker compose
+  roles:
+    - role: prepare
+      tags:
+        - configuration
