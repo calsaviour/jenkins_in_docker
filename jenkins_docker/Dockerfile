@@ -1,5 +1,5 @@
 #
-# Jenkins image with ubuntu
+# Jenkins image with centos
 #
 # Pull base image.
 FROM FROM centos:7
