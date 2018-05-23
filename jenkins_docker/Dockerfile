@@ -11,6 +11,9 @@ ARG http_port=8081
 ENV JENKINS_HOME $JENKINS_HOME
 VOLUME $JENKINS_HOME
 
+# Create the jenkins user
+RUN useradd -d $JENKINS_HOME -u 1000 -m -s /bin/bash jenkins
+RUN chown -R jenkins:jenkins $JENKINS_HOME
 RUN chmod 644 /opt/jenkins.war
 ENTRYPOINT ["java", "-jar", "/opt/jenkins.war", "--httpPort=8081"]
 EXPOSE ${http_port}
