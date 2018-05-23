@@ -39,4 +39,3 @@ sudo docker build -t calsaviour/centos7_openjdk180:latest .
 sudo docker build -t calsaviour/jenkins_docker:latest .
 sudo docker create -v /var/jenkins_home --name jenkins-dv-calvin calsaviour/jenkins_data
 sudo docker run -d -p 8081:8080 --volumes-from jenkins-dv-calvin --name myjenkins calsaviour/jenkins_docker
-RUN chown -R jenkins:jenkins $JENKINS_HOME
