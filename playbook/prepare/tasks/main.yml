@@ -2,9 +2,6 @@
 - name: Prepare host environment with docker
   yum:
     name: docker-1.13.1
-    notify:
-      - start docker
-      - enable docker
 
 - name: Prepare host environment with docker-compose
   yum:
