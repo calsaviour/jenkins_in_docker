@@ -1,4 +1,4 @@
 ---
 - name: Pull jenkins image
   docker_image:
-    name: calsaviour/example-hello
+    name: calsaviour/centos7_openjdk180
