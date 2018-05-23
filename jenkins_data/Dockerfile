@@ -12,4 +12,4 @@ VOLUME $JENKINS_HOME
 
 USER jenkins
 CMD ["echo", "Data container for Jenkins"]
-ENTRYPOINT ["/bin/bash", "Welcome"] 
+ENTRYPOINT ["tail", "-f", "/dev/null"]
