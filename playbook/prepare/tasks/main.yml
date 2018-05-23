@@ -1,5 +1,9 @@
 ---
-- name: Make sure firewalld is running
-  service:
-    name: firewalld
-    state: started
+- name: Prepare host environment with docker
+  yum:
+    name: docker-1.13.1
+
+
+- name: Prepare host environment with docker-compose
+  yum:
+    name: docker-compose-1.9.0      
