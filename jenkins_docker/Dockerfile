@@ -9,7 +9,7 @@ ARG JENKINS_HOME=/var/jenkins_home
 ARG http_port=8081
 
 ENV JENKINS_HOME $JENKINS_HOME
-VOLUME $JENKINS_HOME
+#VOLUME $JENKINS_HOME
 
 # Create the jenkins user
 RUN useradd -d $JENKINS_HOME -u 1000 -m -s /bin/bash jenkins

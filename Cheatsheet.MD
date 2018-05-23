@@ -5,10 +5,6 @@ jenkins:x:1000:1000::/var/jenkins_home:/bin/bash
 # Create a volume
 sudo docker create -v /var/jenkins_home --name jenkins-dv jenkins/jenkins_docker
 
-sudo docker build -t calsaviour/centos7_openjdk180:latest .
-sudo docker build -t calsaviour/jenkins_docker:latest .
-sudo docker create -v /var/jenkins_home --name jenkins-dv-calvin calsaviour/jenkins_data
-sudo docker run -d -p 8081:8080 --volumes-from jenkins-dv-calvin --name myjenkins calsaviour/jenkins_docker
 
 # Create a container with the volume
  sudo docker run -d -p 8080:8080 --volumes-from=jenkins-dv --name=myjenkins jenkins/jenkins_docker
@@ -37,3 +33,10 @@ sudo docker-compose build --no-cache
 1. docker up
 2. docker login
 3. docker push calsaviour/centos7_openjdk180
+
+#Steps to run using docker command
+sudo docker build -t calsaviour/centos7_openjdk180:latest .
+sudo docker build -t calsaviour/jenkins_docker:latest .
+sudo docker create -v /var/jenkins_home --name jenkins-dv-calvin calsaviour/jenkins_data
+sudo docker run -d -p 8081:8080 --volumes-from jenkins-dv-calvin --name myjenkins calsaviour/jenkins_docker
+RUN chown -R jenkins:jenkins $JENKINS_HOME
