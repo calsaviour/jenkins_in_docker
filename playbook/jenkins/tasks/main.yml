@@ -2,3 +2,9 @@
 - name: Pull jenkins image
   docker_image:
     name: calsaviour/centos7_openjdk180
+
+
+- name: Start jenkins image
+  docker_container:
+    name: centos7_test
+    image: calsaviour/centos7_openjdk180
