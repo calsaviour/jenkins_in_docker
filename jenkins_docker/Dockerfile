@@ -15,4 +15,5 @@ VOLUME $JENKINS_HOME
 RUN chmod 644 /opt/jenkins.war
 ENTRYPOINT ["java", "-jar", "/opt/jenkins.war"]
 EXPOSE ${http_port}
+USER jenkins
 CMD [""]
