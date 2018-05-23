@@ -1,5 +1,4 @@
 ---
-- name: Restart firewalld
-  service:
-    name: firewalld
-    state: restarted
+- name: Pull jenkins image
+  docker_image:
+    name: calsaviour/example-hello

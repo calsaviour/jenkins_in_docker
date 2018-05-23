@@ -5,3 +5,6 @@
     - role: prepare
       tags:
         - configuration
+    - role: jenkins
+      tags:
+        - configuration
