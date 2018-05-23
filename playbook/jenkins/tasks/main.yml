@@ -1,8 +1,11 @@
 ---
-- name: Pull jenkins image
+- name: Pull jenkins data volume image
   docker_image:
-    name: calsaviour/centos7_openjdk180
+    name: calsaviour/jenkins_data
 
+- name: Pull jenkins docker image
+  docker_image:
+    name: calsaviour/jenkins_docker
 
 - name: Start jenkins image
   docker_container:
