@@ -6,20 +6,17 @@
       - start docker
       - enable docker
 
-
-
 - name: Prepare host environment with docker-compose
   yum:
     name: docker-compose-1.9.0
 
 
-  handlers:
-    - name: start docker
-      service:
-        name: docker
-        state: started
+- name: start docker
+  service:
+    name: docker
+    state: started
 
-    - name: enable docker
-      service:
-        name: docker    
-        enabled: yes
+- name: enable docker
+  service:
+    name: docker    
+    enabled: yes
