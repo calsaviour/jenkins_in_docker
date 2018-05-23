@@ -13,13 +13,13 @@
     name: docker-compose-1.9.0
 
 
-handlers:
-  - name: start docker
-    service:
-      name: docker
-      state: started
+  handlers:
+    - name: start docker
+      service:
+        name: docker
+        state: started
 
-  - name: enable docker
-    service:
-      name: docker    
-      enabled: yes
+    - name: enable docker
+      service:
+        name: docker    
+        enabled: yes
